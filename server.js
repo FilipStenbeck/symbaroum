@@ -7,19 +7,30 @@ const { SPACE_ID, ACCESS_TOKEN } = require('./config');
 const { getAllNpc } = require('./cms');
 const app = express()
 
-console.log(SPACE_ID, ACCESS_TOKEN);
 const client = contentful.createClient({
   space: SPACE_ID,
   accessToken: ACCESS_TOKEN
 })
 
+/***********************
+* WEB-SERVER CONFIG HERE
+************************/
+
 // serve our static stuff like index.css
 app.use(express.static(path.join(__dirname, 'public')))
 
-//send all requests to index.html so browserHistory in React Router works
-app.get('*', function (req, res) {
+//List all routes that react should now abput to index.html so browserHistory in React Router works (must be a beter way than this)
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
+
+app.get('/npc', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
+/***********************
+* API CONFIG HERE
+************************/
 
 app.use(function(req, res, next) {
 	res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -31,18 +42,16 @@ app.use(function(req, res, next) {
     next();
 });
 
-// send all requests to index.html so browserHistory in React Router works
+
 app.get('/api/welcome', function (req, res) {
    res.json({ message: 'hooray! welcome to our api!' });
 })
 
-// send all requests to index.html so browserHistory in React Router works
 app.get('/api/npc', function (req, res) {
 
     getAllNpc().then((response) => {
         res.json(response);
     });
-
 })
 
 var PORT = process.env.PORT || 8080
