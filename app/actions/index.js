@@ -34,7 +34,7 @@ export function fetchPeople() {
 	        if (response.status >= 400) {
 	          dispatch(loadingPeopleError(response));
 	        }
-					 return response.json();
+			return response.json();
 		}).then(function(items) {
 		 dispatch(loadingPeopleSuccess(items));
  	});

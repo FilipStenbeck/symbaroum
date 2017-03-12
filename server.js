@@ -17,10 +17,6 @@ const client = contentful.createClient({
 // serve our static stuff like index.css
 app.use(express.static(path.join(__dirname, 'public')))
 
-//send all requests to index.html so browserHistory in React Router works
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'public', 'index.html'))
-// })
 
 // send all requests to index.html so browserHistory in React Router works
 app.get('/api/welcome', function (req, res) {
@@ -37,6 +33,11 @@ app.get('/api/contentfultest', function (req, res) {
       .catch((error) => {
         res.send(error);
       })
+})
+
+//send all requests to index.html so browserHistory in React Router works
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 var PORT = process.env.PORT || 8080

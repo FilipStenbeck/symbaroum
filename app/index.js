@@ -6,6 +6,8 @@ import { Provider } from 'react-redux'
 import { Router, Route, browserHistory } from 'react-router'
 
 import PeopleContainer from './containers/peopleContainer';
+import NpcContainer from './components/npc/npcContainer';
+
 
 import { reducer } from './reducers';
 import {
@@ -29,6 +31,7 @@ render(
 			<Route path="/" component={PeopleContainer}/>
 			<Route path="/people" component={PeopleContainer}/>
 			<Route path="/people/:filter" component={PeopleContainer}/>
+            <Route path="/npc" component={NpcContainer}/>
     </Router>
   </Provider>,
 	document.getElementById('app')
