@@ -3,7 +3,7 @@ import Npc from './npc.jsx'
 
 const mapStateToProps = (state) => {
   return {
-      npc: []
+      npc: state.npc || []
   }
 }
 
