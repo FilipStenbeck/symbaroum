@@ -15,7 +15,7 @@ node: {
      ]),
      new webpack.DefinePlugin({
      'process.env': {
-       'API': '"https://symbaroum.herokuapp.com/api/webpack-dev-server"'
+       'API': '"https://symbaroum.herokuapp.com/api"'
         }
     })
    ],

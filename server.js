@@ -13,9 +13,9 @@ const client = contentful.createClient({
   accessToken: ACCESS_TOKEN
 })
 
-/*
-* Configure Express
-*/
+// serve our static stuff like index.css
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.use(function(req, res, next) {
 	res.setHeader('Content-Type', 'application/json; charset=utf-8');
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -23,13 +23,8 @@ app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Max-Age', '3600');
 	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 	res.setHeader('Cache-Control', 'max-age=120');
-	next();
+    next();
 });
-
-
-// serve our static stuff like index.css
-app.use(express.static(path.join(__dirname, 'public')))
-
 
 // send all requests to index.html so browserHistory in React Router works
 app.get('/api/welcome', function (req, res) {

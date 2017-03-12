@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack && node server.js",
     "test": "NODE_ENV=production $(npm bin)/mocha --require ignore-styles --harmony --compilers js:babel-core/register --recursive app/**/*_spec.js",
-    "dev": "API=https://symbaroum.herokuapp.com/api/webpack-dev-server webpack-dev-server --progress --colors --content-base public --history-api-fallback",
+    "dev": "webpack-dev-server --progress --colors --content-base public --history-api-fallback",
     "build": "webpack",
     "prod": "webpack && node server.js"
   },
