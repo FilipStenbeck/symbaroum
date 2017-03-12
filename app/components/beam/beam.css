@@ -1,0 +1,20 @@
+.beamContainer {
+	max-width: 900px;
+}
+
+.beam {
+	background: #f2f2f2;
+  margin: 20px 0px 20px 0px;
+  padding: 20px 0px;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px 0px;
+}
+
+.beamImage {
+	height: 228px;
+	min-width: 270px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 120% 80% 120% 70%/180% 60% 80% 70%;
+}

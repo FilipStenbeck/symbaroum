@@ -1,0 +1,15 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+# Dependency directory
+node_modules
+
+# Build output
+bundle.js
+public/milligram.min.css
+
+# Local environment file
+.env
