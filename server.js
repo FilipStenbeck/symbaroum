@@ -16,6 +16,11 @@ const client = contentful.createClient({
 // serve our static stuff like index.css
 app.use(express.static(path.join(__dirname, 'public')))
 
+//send all requests to index.html so browserHistory in React Router works
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
 app.use(function(req, res, next) {
 	res.setHeader('Content-Type', 'application/json; charset=utf-8');
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -38,11 +43,6 @@ app.get('/api/npc', function (req, res) {
         res.json(response);
     });
 
-})
-
-//send all requests to index.html so browserHistory in React Router works
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 var PORT = process.env.PORT || 8080

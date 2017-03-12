@@ -34,7 +34,6 @@ export function loadNpcFailure(error) {
 
 export function fetchNpc() {
   return (dispatch, getState) => {
-      console.log(`${API}/npc`);
         fetch(`${API}/npc`)
         .then(function(response) {
             if (response.status >= 400) {
