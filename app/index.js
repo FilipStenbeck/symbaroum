@@ -20,6 +20,7 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
     applyMiddleware(thunk)
   ));
 
+
 store.dispatch(fetchPeople());
 store.dispatch(fetchNpc());
 
