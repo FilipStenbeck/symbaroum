@@ -2,6 +2,9 @@
 const createStore = require('redux').createStore;
 
 import {
+    LOAD_NPC_REQUEST,
+    LOAD_NPC_FAILURE,
+    LOAD_NPC_SUCCESS,
 	LOADING_PEOPLE,
 	LOADING_PEOPLE_SUCCESS,
 	LOADING_PEOPLE_ERROR,
@@ -15,6 +18,8 @@ export function reducer(state = {}, action) {
 		  return Object.assign({}, state, { people: action.payload });
 		case SET_NEW_FILTER:
 		  return Object.assign({}, state, { filter: action.payload });
+        case LOAD_NPC_SUCCESS:
+  		  return Object.assign({}, state, { status: { npc: 'SUCCESS' },npc: action.payload });
   default:
     return state
   }

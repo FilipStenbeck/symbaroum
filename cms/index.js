@@ -10,9 +10,11 @@ const client = contentful.createClient({
 const getAllNpc = () => {
     return client.getEntries({'content_type': CONTENT_TYPES.NPC})
       .then((response) => {
-          return response;
+          const items = response.items || [];
+          return items.map((item) => item.fields);
       })
       .catch((error) => {
+          console.log('getAllNpc', error);
          return error
       })
 }

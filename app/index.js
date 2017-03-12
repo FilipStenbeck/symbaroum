@@ -8,10 +8,10 @@ import { Router, Route, browserHistory } from 'react-router'
 import PeopleContainer from './containers/peopleContainer';
 import NpcContainer from './components/npc/npcContainer';
 
-
 import { reducer } from './reducers';
 import {
-	fetchPeople
+	fetchPeople,
+    fetchNpc
 } from './actions'
 
 //Setup the store and initial state of the app
@@ -21,6 +21,8 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
   ));
 
 store.dispatch(fetchPeople());
+store.dispatch(fetchNpc());
+
 
 //Save store on windows for easy access from the dev-tool console
 window.store = store;
