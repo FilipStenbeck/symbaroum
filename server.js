@@ -4,7 +4,7 @@ const contentful = require('contentful')
 const path = require('path')
 const compression = require('compression')
 const { SPACE_ID, ACCESS_TOKEN } = require('./config');
-
+const { getAllNpc } = require('./cms');
 const app = express()
 
 console.log(SPACE_ID, ACCESS_TOKEN);
@@ -24,15 +24,12 @@ app.get('/api/welcome', function (req, res) {
 })
 
 // send all requests to index.html so browserHistory in React Router works
-app.get('/api/contentfultest', function (req, res) {
+app.get('/api/npc', function (req, res) {
 
-    client.getEntries()
-      .then((response) => {
-        res.json(response.items[0].fields.portrait);
-      })
-      .catch((error) => {
-        res.send(error);
-      })
+    getAllNpc().then((response) => {
+        res.json(response);
+    });
+    
 })
 
 //send all requests to index.html so browserHistory in React Router works
