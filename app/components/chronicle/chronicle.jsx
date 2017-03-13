@@ -2,9 +2,9 @@ import React from 'react';
 
 import {
     title,
+    image,
     container,
-    part,
-    image
+    part
 } from "./chronicle.css";
 
 const ChronicleImage = ({image}) => {
@@ -22,18 +22,14 @@ const ChronicleItem = ({ model }) => {
     }
     return (
         <div className={container} key={model.number}>
-        <div className={"row"}>
-            <div className="column">
-                <span className={title}>
-                    <h2>{model.title} </h2>
-                </span>
-               { model.chroniclePart.map((model) => (
-                   <div className={part}>
-                       <ChroniclePart model={model}/>
-                   </div>
-               ))}
-            </div>
-          </div>
+
+            <h2 className={title}>{model.title} </h2>
+
+           { model.chroniclePart.map((model) => (
+               <div className={part}>
+                   <ChroniclePart model={model}/>
+               </div>
+           ))}
         </div>
     )
 };
