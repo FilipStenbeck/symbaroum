@@ -1,9 +1,11 @@
 import React from 'react';
 
 import {
-  people,
-  npcContainer,
-  npcImage
+    info,
+    imgContainer,
+    people,
+    npcContainer,
+    npcImage
 } from "./npc.css";
 
 export default class Npc extends React.Component {
@@ -23,14 +25,15 @@ export default class Npc extends React.Component {
 
               <div key={people.name} className={people}>
                 <div className={"row " + npcContainer}>
-                  <div className={"column column-40"}>
-                      <img className={npcImage} src={people.portrait.fields.file.url} alt={people.name} title={people.name}/>
-
+                  <div className={"column"}>
+                      <div className={imgContainer}>
+                          <img className={npcImage} src={people.portrait.fields.file.url} alt={people.name} title={people.name}/>
+                      </div>
                   </div>
-                    <div className={"column column-60"}>
-                    <h2>
+                    <div className={`${info} column`}>
+                    <h3>
                         {people.name}
-                    </h2>
+                    </h3>
                         {people.description}
                   </div>
                 </div>
