@@ -4,7 +4,7 @@ const contentful = require('contentful')
 const path = require('path')
 const compression = require('compression')
 const { SPACE_ID, ACCESS_TOKEN } = require('./config');
-const { getAllNpc } = require('./cms');
+const { getAllNpc, getAllChronicles } = require('./cms');
 const app = express()
 
 const client = contentful.createClient({
@@ -48,8 +48,13 @@ app.get('/api/welcome', function (req, res) {
 })
 
 app.get('/api/npc', function (req, res) {
-
     getAllNpc().then((response) => {
+        res.json(response);
+    });
+})
+
+app.get('/api/chronicles', function (req, res) {
+    getAllChronicles().then((response) => {
         res.json(response);
     });
 })

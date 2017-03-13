@@ -1,5 +1,6 @@
 const CONTENT_TYPES = {
-    NPC: 'npc'
+    NPC: 'npc',
+    CHRONICLE: 'chronicle'
 }
 
 module.exports = {

@@ -19,6 +19,18 @@ const getAllNpc = () => {
       })
 }
 
+const getAllChronicles = () => {
+    return client.getEntries({'content_type': CONTENT_TYPES.CHRONICLE})
+      .then((response) => {
+          const items = response.items || [];
+          return items.map((item) => item.fields);
+      })
+      .catch((error) => {
+          console.log('getAllNpc', error);
+         return error
+      })
+}
+
 module.exports = {
     getAllNpc
 }

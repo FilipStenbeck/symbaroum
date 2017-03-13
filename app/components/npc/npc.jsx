@@ -19,7 +19,7 @@ export default class Npc extends React.Component {
     return (
       <div>
         <div>
-          <h1>NPCs</h1>
+          <h1>Persongalleri</h1>
 
           { npc.map((people) => (
 
