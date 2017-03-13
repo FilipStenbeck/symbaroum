@@ -23,7 +23,9 @@ const getAllChronicles = () => {
     return client.getEntries({'content_type': CONTENT_TYPES.CHRONICLE})
       .then((response) => {
           const items = response.items || [];
-          return items.map((item) => item.fields);
+          return items
+            .map((item) => item.fields)
+            .sort((a, b) => a.order - b.order);
       })
       .catch((error) => {
           console.log('getAllChronicles', error);

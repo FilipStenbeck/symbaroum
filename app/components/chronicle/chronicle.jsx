@@ -17,8 +17,8 @@ const ChronicleImage = ({image}) => {
 };
 
 const ChronicleItem = ({ model }) => {
-    if (!model) {
-        return;
+    if (!model || !model.chroniclePart) {
+        return false;
     }
     return (
         <div className={container} key={model.number}>
