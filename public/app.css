@@ -1,3 +1,7 @@
 body {
-    background: black;
+    background: url(https://i0.wp.com/theironpact.com/wp-content/uploads/2016/12/symbaroum-ruins.jpg?fit=1160%2C688) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
