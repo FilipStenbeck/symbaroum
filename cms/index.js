@@ -26,11 +26,12 @@ const getAllChronicles = () => {
           return items.map((item) => item.fields);
       })
       .catch((error) => {
-          console.log('getAllNpc', error);
+          console.log('getAllChronicles', error);
          return error
       })
 }
 
 module.exports = {
-    getAllNpc
+    getAllNpc,
+    getAllChronicles
 }
