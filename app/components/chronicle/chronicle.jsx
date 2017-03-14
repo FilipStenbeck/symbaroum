@@ -3,7 +3,7 @@ import Header from '../header/header.jsx';
 
 import {
     title,
-    image,
+    display,
     part
 } from "./chronicle.css";
 
@@ -16,7 +16,7 @@ const ChronicleImage = ({image}) => {
         return false;
     }
     return (
-        <img className={image} src={image.fields.file.url}/>
+        <img className={display} src={image.fields.file.url}/>
     )
 };
 
