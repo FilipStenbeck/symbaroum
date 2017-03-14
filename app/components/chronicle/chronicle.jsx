@@ -39,7 +39,24 @@ const ChroniclePart = ({ model }) => {
         return;
     }
     const images = model.fields.images || [];
+    const imagestartLeft = model.fields.imageStartsLeft;
 
+    if (imagestartLeft) {
+        return (
+            <div key={model.fields.title}>
+              <div className="row">
+                  { images.map((image) => (
+                      <div className="column">
+                          <ChronicleImage image={image}/>
+                      </div>
+                  ))}
+                <div className="column">
+                   {model.fields.text}
+                </div>
+              </div>
+          </div>
+        )
+    }
     return (
         <div key={model.fields.title}>
           <div className="row">
