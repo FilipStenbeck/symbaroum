@@ -1,0 +1,36 @@
+.header{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.link {
+	font-size: 2em;
+	text-decoration: none;
+	color: gray;
+	margin-right: 20px;
+}
+
+.link:hover {
+  -webkit-transition: box-shadow .9s;
+  transition: box-shadow .9s;
+  -webkit-transition: color .9s;
+  transition: color .9s;
+  color: white;
+  text-decoration: none!important;
+  box-shadow: inset 0 -2px 0 white;
+}
+
+.selected {
+    font-size: 2em;
+	text-decoration: none;
+	color: white;
+	margin-right: 20px;
+}
+
+.selected:hover {
+  -webkit-transition: box-shadow .9s;
+  transition: box-shadow .9s;
+  color: white;
+  text-decoration: none!important;
+  box-shadow: inset 0 -2px 0 white;
+}

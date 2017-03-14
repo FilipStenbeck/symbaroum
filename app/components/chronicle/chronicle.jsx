@@ -1,11 +1,15 @@
 import React from 'react';
+import Header from '../header/header.jsx';
 
 import {
     title,
     image,
-    container,
     part
 } from "./chronicle.css";
+
+import {
+    item
+} from "../../../public/app.css";
 
 const ChronicleImage = ({image}) => {
     if (!image) {
@@ -21,7 +25,7 @@ const ChronicleItem = ({ model }) => {
         return false;
     }
     return (
-        <div className={container} key={model.number}>
+        <div className={item} key={model.number}>
 
             <h2 className={title}>{model.title} </h2>
 
@@ -82,7 +86,7 @@ export default class Chronicle extends React.Component {
     }
     return (
     <div>
-        <h1>Krönika</h1>
+        <Header choosen='chronicle'/>
       <div>
           { chronicle.map((chronicle) => (
               <ChronicleItem model={chronicle} key={chronicle.order}/>

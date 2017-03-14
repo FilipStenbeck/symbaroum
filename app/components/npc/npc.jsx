@@ -8,6 +8,12 @@ import {
     npcImage
 } from "./npc.css";
 
+import {
+    item
+} from "../../../public/app.css";
+
+import Header from '../header/header.jsx'
+
 export default class Npc extends React.Component {
 
 
@@ -19,12 +25,12 @@ export default class Npc extends React.Component {
     return (
       <div>
         <div>
-          <h1>Persongalleri</h1>
+            <Header choosen='npc'/>
 
-          { npc.map((people) => (
+            { npc.map((people) => (
 
               <div key={people.name} className={people}>
-                <div className={"row " + npcContainer}>
+                <div className={"row " + item}>
                   <div className={"column"}>
                       <div className={imgContainer}>
                           <img className={npcImage} src={people.portrait.fields.file.url} alt={people.name} title={people.name}/>

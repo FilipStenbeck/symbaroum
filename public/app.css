@@ -2,10 +2,26 @@ body {
     background: black;
 }
 
+.item {
+    color: black;
+    max-width: 900px;
+    background: #f2f2f2;
+    margin: 20px 0px 40px 20px;
+    padding: 20px 0px;
+    border-color: #cccccc;
+    border-style: solid;
+    border-width: 1px 0px;
+
+}
+
 @media (min-width: 640px) {
     h1 {
         color: white;
         margin-top: 20px;
+    }
+
+    .item {
+        opacity: 0.9;
     }
     body {
         background: url(https://i0.wp.com/theironpact.com/wp-content/uploads/2016/12/symbaroum-ruins.jpg?fit=1160%2C688) no-repeat center center fixed;
