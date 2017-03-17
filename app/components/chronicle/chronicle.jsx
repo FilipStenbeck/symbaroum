@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../header/header.jsx';
+import ChroniclePart from './chroniclePart.jsx'
 
 import {
     title,
@@ -11,15 +12,6 @@ import {
     item
 } from "../../../public/app.css";
 
-const ChronicleImage = ({image}) => {
-    if (!image) {
-        return false;
-    }
-    return (
-        <img className={display} src={image.fields.file.url}/>
-    )
-};
-
 const ChronicleItem = ({ model }) => {
     if (!model || !model.chroniclePart) {
         return false;
@@ -30,50 +22,11 @@ const ChronicleItem = ({ model }) => {
             <h2 className={title}>{model.title} </h2>
 
            { model.chroniclePart.map((model) => (
-               <div className={part}>
+               <div className={part} key={model.sys.id}>
                    <ChroniclePart model={model}/>
                </div>
            ))}
         </div>
-    )
-};
-
-const ChroniclePart = ({ model }) => {
-    if (!model) {
-        return;
-    }
-    const images = model.fields.images || [];
-    const imagestartLeft = model.fields.imageStartsLeft;
-
-    if (imagestartLeft) {
-        return (
-            <div key={model.fields.title}>
-              <div className="row">
-                  { images.map((image) => (
-                      <div className="column">
-                          <ChronicleImage image={image}/>
-                      </div>
-                  ))}
-                <div className="column">
-                   {model.fields.text}
-                </div>
-              </div>
-          </div>
-        )
-    }
-    return (
-        <div key={model.fields.title}>
-          <div className="row">
-            <div className="column">
-               {model.fields.text}
-            </div>
-            { images.map((image) => (
-                <div className="column">
-                    <ChronicleImage image={image}/>
-                </div>
-            ))}
-          </div>
-      </div>
     )
 };
 

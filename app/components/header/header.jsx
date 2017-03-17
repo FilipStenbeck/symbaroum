@@ -13,7 +13,7 @@ const Header = ({choosen}) => {
         return (
             <nav className={header}>
                 <span><Link className={selected} to='/'>Krönika</Link></span>
-                <span><Link className={link} to='/npc'>Persongalleri</Link></span>
+                <span><Link className={link} to='/npc'>Personer</Link></span>
 
             </nav>
     	);
@@ -22,7 +22,7 @@ const Header = ({choosen}) => {
         return (
             <nav className={header}>
                 <span><Link className={link} to='/'>Krönika</Link></span>
-                <span><Link className={selected} to='/npc'>Persongalleri</Link></span>
+                <span><Link className={selected} to='/npc'>Personer</Link></span>
 
             </nav>
     	);
@@ -31,7 +31,7 @@ const Header = ({choosen}) => {
     return (
         <nav className={header}>
             <span><Link className={link} to='/'>Krönika</Link></span>
-            <span><Link className={link + ' ' + selected} to='/npc'>Persongalleri</Link></span>
+            <span><Link className={link + ' ' + selected} to='/npc'>Personer</Link></span>
 
         </nav>
     );
