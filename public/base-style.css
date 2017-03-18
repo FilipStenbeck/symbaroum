@@ -6,7 +6,6 @@ body {
     background-size: cover;
 }
 
-
 @media (max-width: 600px) {
     body {
         background: #1d1f21;
@@ -25,9 +24,5 @@ body {
     h1 {
         color: white;
         margin-top: 20px;
-    }
-
-    .item {
-        margin: 20px 0px 40px 0px;
     }
 }
