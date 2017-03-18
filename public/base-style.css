@@ -1,0 +1,33 @@
+body {
+    background: url("images/symbaroum-ruins.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        background: #1d1f21;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    .item {
+        margin: 10px 0px 10px 0px;
+    }
+}
+
+@media (min-width: 640px) {
+    h1 {
+        color: white;
+        margin-top: 20px;
+    }
+
+    .item {
+        margin: 20px 0px 40px 0px;
+    }
+}
