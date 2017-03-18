@@ -6,6 +6,17 @@ body {
     background-size: cover;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+}
+
+.logo {
+    max-width: 50%;
+}
+
 .item {
     color: black;
     max-width: 900px;
@@ -24,6 +35,11 @@ body {
     body {
         background: #1d1f21;
     }
+    
+    .logo-container {
+        display: none;
+    }
+
     .item {
         margin: 10px 0px 10px 0px;
     }
