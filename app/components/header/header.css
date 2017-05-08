@@ -13,7 +13,7 @@
     animation: slideIn 1s forwards;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 599px) {
     .linkContainer {
         display: none;
     }

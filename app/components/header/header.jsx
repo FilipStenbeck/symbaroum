@@ -19,7 +19,6 @@ const HeaderLogo = () => {
 }
 
 const Header = ({choosen, links}) => {
-    console.log(links);
     if (choosen === 'chronicle') {
         return (
             <div>
