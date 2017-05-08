@@ -3,6 +3,8 @@ const { Link } = require('react-router');
 
 import {
     header,
+    linkContainer,
+    linkSmall,
     link,
     navigation,
     selected
@@ -16,7 +18,8 @@ const HeaderLogo = () => {
     )
 }
 
-const Header = ({choosen}) => {
+const Header = ({choosen, links}) => {
+    console.log(links);
     if (choosen === 'chronicle') {
         return (
             <div>
@@ -25,6 +28,12 @@ const Header = ({choosen}) => {
                     <span><Link className={selected} to='/'>Krönika</Link></span>
                     <span><Link className={link} to='/npc'>Personer</Link></span>
                 </nav>
+
+                <div className={linkContainer}>
+                    { links.map((target) => (
+                        <span><a className={linkSmall} href={'#' + target}>{target}</a></span>
+                    ))}
+                </div>
             </div>
     	);
     }

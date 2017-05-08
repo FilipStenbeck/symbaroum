@@ -17,7 +17,7 @@ const ChronicleItem = ({ model }) => {
         return false;
     }
     return (
-        <div className={item} key={model.number}>
+        <div id={model.title} className={item} key={model.number}>
 
             <h2 className={title}>{model.title} </h2>
 
@@ -39,7 +39,7 @@ export default class Chronicle extends React.Component {
     }
     return (
     <div>
-        <Header choosen='chronicle'/>
+        <Header choosen='chronicle' links={chronicle.map((chronicle) => chronicle.title)}/>
       <div>
           { chronicle.map((chronicle) => (
               <ChronicleItem model={chronicle} key={chronicle.order}/>
