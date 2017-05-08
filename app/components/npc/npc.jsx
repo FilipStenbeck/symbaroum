@@ -3,8 +3,6 @@ import React from 'react';
 import {
     info,
     imgContainer,
-    people,
-    npcContainer,
     npcImage
 } from "./npc.css";
 
@@ -25,11 +23,11 @@ export default class Npc extends React.Component {
     return (
       <div>
         <div>
-            <Header choosen='npc'/>
+            <Header choosen='npc' links={npc.map((people) => people.name)}/>
 
             { npc.map((people) => (
 
-              <div key={people.name} className={people}>
+              <div id={people.name} key={people.name}>
                 <div className={"row " + item}>
                   <div className={"column"}>
                       <div className={imgContainer}>

@@ -43,8 +43,12 @@ const Header = ({choosen, links}) => {
                 <nav className={header}>
                     <span><Link className={link} to='/'>Krönika</Link></span>
                     <span><Link className={selected} to='/npc'>Personer</Link></span>
-
                 </nav>
+                <div className={linkContainer}>
+                        {links.map((target) => (
+                        <span><a className={linkSmall} href={'#' + target}>{target}</a></span>
+                    ))}
+                </div>
             </div>
     	);
     }
