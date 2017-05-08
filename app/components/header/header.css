@@ -3,6 +3,12 @@
     margin-bottom: 50px;
 }
 
+.headerContainer {
+    padding: 20px;
+    margin-bottom: 40px;
+    background: rgba(13, 11, 11, 0.89);;
+}
+
 .linkContainer {
     color: #FAEBD7;
     max-width: 900px;
@@ -16,6 +22,11 @@
 @media (max-width: 599px) {
     .linkContainer {
         display: none;
+    }
+
+    .header{
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
 
