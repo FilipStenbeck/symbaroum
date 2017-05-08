@@ -38,12 +38,14 @@ export default class Chronicle extends React.Component {
         return false;
     }
     return (
-    <div>
-        <Header choosen='chronicle' links={chronicle.map((chronicle) => chronicle.title)}/>
-        <div className="container">
-          { chronicle.map((chronicle) => (
-              <ChronicleItem model={chronicle} key={chronicle.order}/>
-          ))}
+        <div>
+            <Header choosen='chronicle' links={chronicle.map((chronicle) => chronicle.title)}/>
+            <div className="app">
+            <div className="container">
+              { chronicle.map((chronicle) => (
+                  <ChronicleItem model={chronicle} key={chronicle.order}/>
+              ))}
+            </div>
         </div>
     </div>
     )

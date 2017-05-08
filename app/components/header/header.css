@@ -1,11 +1,15 @@
 .header{
-    margin-top: 20px;
-    margin-bottom: 50px;
+    padding: 20px;
+    margin-top: 2px;
+    margin-bottom: 30px;
 }
 
 .headerContainer {
-    padding: 20px;
-    margin-bottom: 40px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    min-height: 120px;
+    margin-top: -24px;
     background: rgba(13, 11, 11, 0.89);;
 }
 
@@ -13,6 +17,8 @@
     color: #FAEBD7;
     max-width: 900px;
     margin-top: -45px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     position: relative;
     -webkit-animation: slideIn 1s forwards;
     -moz-animation: slideIn 1s forwards;
@@ -23,7 +29,9 @@
     .linkContainer {
         display: none;
     }
-
+    .headerContainer {
+        min-height: 90px;
+    }
     .header{
         margin-top: 0px;
         margin-bottom: 0px;
