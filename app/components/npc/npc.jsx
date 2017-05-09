@@ -15,6 +15,30 @@ import {
 
 import Header from '../header/header.jsx'
 
+const NpcItem = ({ model }) => {
+    if (!model) {
+        return false;
+    }
+    return (
+        <div className={item} key={model.name}>
+            <a className="hiddenAnchor" id={model.name}>{model.name}</a>
+            <div className={"row"}>
+             <div className={"column"}>
+                 <div className={imgContainer}>
+                     <img className={npcImage} src={model.portrait.fields.file.url} alt={model.name} title={model.name}/>
+                 </div>
+             </div>
+               <div className={`${info} column`}>
+               <h3 className={extraPadding}>
+                   {model.name}
+               </h3>
+                   {model.description}
+             </div>
+           </div>
+        </div>
+    )
+};
+
 export default class Npc extends React.Component {
 
 
@@ -26,26 +50,11 @@ export default class Npc extends React.Component {
     return (
         <div>
             <Header choosen='npc' links={npc.map((people) => people.name)}/>
-
             <div className="app">
                 <div className="container">
                     { npc.map((people) => (
-
                       <div key={people.name}>
-                         <a className="hiddenAnchor" id={people.name}>{people.name}</a>
-                        <div className={"row " + item}>
-                          <div className={"column"}>
-                              <div className={imgContainer}>
-                                  <img className={npcImage} src={people.portrait.fields.file.url} alt={people.name} title={people.name}/>
-                              </div>
-                          </div>
-                            <div className={`${info} column`}>
-                            <h3 className={extraPadding}>
-                                {people.name}
-                            </h3>
-                                {people.description}
-                          </div>
-                        </div>
+                          <NpcItem model={people}/>
                       </div>
                   ))}
               </div>
