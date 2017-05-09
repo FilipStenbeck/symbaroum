@@ -13,17 +13,18 @@
     max-width: 1200px;
     background: #fffafa;
     margin: 20px 0px 50px 0px;
-    padding: 20px 0px;
+    
     border-color: #cccccc;
     border-style: solid;
     border-width: 1px 0px;
     opacity: 0.9;
     border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 }
 
 .hiddenAnchor {
-    padding-top: 90px;
+    padding-top: 120px;
     margin-left: -1222px;
 }
 .logo {

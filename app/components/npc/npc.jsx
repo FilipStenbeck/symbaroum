@@ -5,7 +5,8 @@ import {
     npc,
     info,
     imgContainer,
-    npcImage
+    npcImage,
+    extraPadding
 } from "./npc.css";
 
 import {
@@ -39,7 +40,7 @@ export default class Npc extends React.Component {
                               </div>
                           </div>
                             <div className={`${info} column`}>
-                            <h3>
+                            <h3 className={extraPadding}>
                                 {people.name}
                             </h3>
                                 {people.description}

@@ -10,7 +10,8 @@
     width: 100%;
     min-height: 120px;
     margin-top: -24px;
-    background: rgba(13, 11, 11, 0.89);;
+    background: rgba(13, 11, 11, 0.89);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .linkContainer {

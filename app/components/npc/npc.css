@@ -15,7 +15,11 @@
     min-width: 270px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top:  20px;
     border-radius: 120% 80% 120% 70%/180% 60% 80% 70%;
+}
+.extraPadding {
+    padding-top:  20px;
 }
 
 @media (max-width: 640px) {
