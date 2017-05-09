@@ -1,6 +1,8 @@
 import React from 'react';
+import Logo from '../header/logo.jsx';
 
 import {
+    npc,
     info,
     imgContainer,
     npcImage
@@ -23,11 +25,13 @@ export default class Npc extends React.Component {
     return (
         <div>
             <Header choosen='npc' links={npc.map((people) => people.name)}/>
+
             <div className="app">
                 <div className="container">
                     { npc.map((people) => (
 
-                      <div id={people.name} key={people.name}>
+                      <div className={npc} key={people.name}>
+                         <a className="hiddenAnchor" id={people.name}>{people.name}</a>
                         <div className={"row " + item}>
                           <div className={"column"}>
                               <div className={imgContainer}>

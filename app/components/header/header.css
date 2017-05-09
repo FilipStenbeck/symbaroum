@@ -20,9 +20,7 @@
     padding-left: 20px;
     padding-bottom: 20px;
     position: relative;
-    -webkit-animation: slideIn 1s forwards;
-    -moz-animation: slideIn 1s forwards;
-    animation: slideIn 1s forwards;
+    animation: slideIn 0.8s forwards;
 }
 
 @media (max-width: 599px) {

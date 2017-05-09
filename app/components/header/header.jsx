@@ -11,14 +11,6 @@ import {
     selected
 } from "./header.css";
 
-const HeaderLogo = () => {
-    return (
-        <div className="logo-container">
-            <img className="logo" src="/images/symbaroum_logo_600px.png"/>
-        </div>
-    )
-}
-
 const Header = ({choosen, links}) => {
     if (choosen === 'chronicle') {
         return (
@@ -27,7 +19,6 @@ const Header = ({choosen, links}) => {
                     <span><Link className={selected} to='/'>Krönika</Link></span>
                     <span><Link className={link} to='/npc'>Personer</Link></span>
                 </nav>
-
                 <div className={linkContainer}>
                     { links.map((target) => (
                         <span><a className={linkSmall} href={'#' + target}>{target}</a></span>
@@ -39,7 +30,6 @@ const Header = ({choosen, links}) => {
     if (choosen === 'npc') {
         return (
             <div className={headerContainer}>
-                
                 <nav className={header}>
                     <span><Link className={link} to='/'>Krönika</Link></span>
                     <span><Link className={selected} to='/npc'>Personer</Link></span>

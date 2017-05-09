@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from '../header/header.jsx';
+import Logo from '../header/logo.jsx';
+
 import ChroniclePart from './chroniclePart.jsx'
 
 import {
@@ -17,8 +19,8 @@ const ChronicleItem = ({ model }) => {
         return false;
     }
     return (
-        <div id={model.title} className={item} key={model.number}>
-
+        <div className={item} key={model.number}>
+            <a className="hiddenAnchor" id={model.title}>{model.title}</a>
             <h2 className={title}>{model.title} </h2>
 
            { model.chroniclePart.map((model) => (
