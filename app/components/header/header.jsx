@@ -44,11 +44,10 @@ const Header = ({choosen, links}) => {
     }
 
     return (
-        <div>
+        <div className={headerContainer}>
             <nav className={header}>
                 <span><Link className={link} to='/'>Krönika</Link></span>
-                <span><Link className={link + ' ' + selected} to='/npc'>Personer</Link></span>
-
+                <span><Link className={link + ' '} to='/npc'>Personer</Link></span>
             </nav>
         </div>
     );

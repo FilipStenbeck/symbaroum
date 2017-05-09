@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../header/logo.jsx';
 
 import {
-    npc,
+    npcContainer,
     info,
     imgContainer,
     npcImage,
@@ -31,7 +31,7 @@ export default class Npc extends React.Component {
                 <div className="container">
                     { npc.map((people) => (
 
-                      <div className={npc} key={people.name}>
+                      <div key={people.name}>
                          <a className="hiddenAnchor" id={people.name}>{people.name}</a>
                         <div className={"row " + item}>
                           <div className={"column"}>

@@ -7,6 +7,8 @@ import { Router, Route, browserHistory } from 'react-router'
 
 import NpcContainer from './components/npc/npcContainer';
 import chronicleContainer from './components/chronicle/chronicleContainer';
+import SplashContainer from './components/splash/splashContainer';
+
 
 
 import { reducer } from './reducers';
@@ -36,6 +38,7 @@ render(
 		<Router history={browserHistory}>
 			<Route path="/" component={chronicleContainer}/>
             <Route path="/npc" component={NpcContainer}/>
+			<Route path="/splash" component={SplashContainer}/>
     </Router>
   </Provider>,
 	document.getElementById('app')
