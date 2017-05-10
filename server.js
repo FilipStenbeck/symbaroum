@@ -28,6 +28,14 @@ app.get('/npc', function (req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
+app.get('/splash', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
+app.get('/chronicle', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
 /***********************
 * API CONFIG HERE
 ************************/

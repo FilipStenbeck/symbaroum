@@ -7,10 +7,16 @@
 }
 
 .imgContainer {
+    padding-left: 20px;
     text-align: center;
+
 }
 .npcImage {
-    padding: 20px;
+    opacity: 1.0;
+    margin-top: 8px;
+    border-radius: 10px;
+    min-width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .extraPadding {
     padding-top:  20px;

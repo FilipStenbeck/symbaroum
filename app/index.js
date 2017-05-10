@@ -37,6 +37,7 @@ render(
 	<Provider store={store}>
 		<Router history={browserHistory}>
 			<Route path="/" component={chronicleContainer}/>
+			<Route path="/chronicle" component={chronicleContainer}/>
             <Route path="/npc" component={NpcContainer}/>
 			<Route path="/splash" component={SplashContainer}/>
     </Router>
