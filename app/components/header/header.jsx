@@ -3,6 +3,7 @@ const { Link } = require('react-router');
 
 import {
     header,
+    splashHeader,
     linkContainer,
     headerContainer,
     linkSmall,
@@ -11,7 +12,18 @@ import {
     selected
 } from "./header.css";
 
-const Header = ({choosen, links}) => {
+const Header = ({choosen, links, splash}) => {
+
+    if (splash) {
+        return (
+            <div className={headerContainer}>
+                <nav className={splashHeader}>
+                    <span><Link className={link} to='/'>Krönika</Link></span>
+                    <span><Link className={link + ' '} to='/npc'>Personer</Link></span>
+                </nav>
+            </div>
+        )
+    }
     if (choosen === 'chronicle') {
         return (
             <div className={headerContainer}>

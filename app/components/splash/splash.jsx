@@ -20,7 +20,7 @@ export default class Splash extends React.Component {
   render() {
     return (
         <div>
-            <Header choosen='none'/>
+            <Header choosen='none' splash/>
             <div className="app">
             <div className="container">
               <Logo/>

@@ -1,13 +1,17 @@
-.header{
+.header {
     padding-left: 20px;
-    padding-bottom: 8px;
+}
+
+.splashHeader {
+    padding-left: 20px;
+    padding-top: 12px;
 }
 
 .headerContainer {
     position: fixed;
     z-index: 2;
     width: 100%;
-    min-height: 108px;
+    min-height: 82px;
     background: rgba(13, 11, 11, 0.89);
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
