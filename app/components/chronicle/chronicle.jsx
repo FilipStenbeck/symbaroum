@@ -21,7 +21,7 @@ const ChronicleItem = ({ model }) => {
     return (
         <div className={item} key={model.number}>
             <a className="hiddenAnchor" id={model.title}>{model.title}</a>
-            <h2 className={title}>{model.title} </h2>
+            <h3 className={title}>{model.title} </h3>
 
            { model.chroniclePart.map((model) => (
                <div className={part} key={model.sys.id}>

@@ -1,10 +1,12 @@
 .header {
     padding-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .splashHeader {
     padding-left: 20px;
-    padding-top: 12px;
+    padding-top: 20px;
 }
 
 .headerContainer {
@@ -61,7 +63,7 @@
 }
 
 .link {
-	font-size: 2em;
+	font-size: 1.6em;
 	text-decoration: none;
 	color: gray;
 	margin-right: 20px;
@@ -91,7 +93,7 @@
 }
 
 .selected {
-    font-size: 2em;
+    font-size: 1.6em;
 	text-decoration: none;
 	color: white;
 	margin-right: 20px;
