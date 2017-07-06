@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../header/header.jsx';
-import Logo from '../header/logo.jsx';
 
 import ChroniclePart from './chroniclePart.jsx'
+import unique from '../../utils/unique';
+import { chapterNames } from '../../utils/chapterNames';
 
 import {
     title,
-    display,
     part
 } from "./chronicle.css";
 
@@ -14,13 +14,14 @@ import {
     item
 } from "../../../public/app.css";
 
+
 const ChronicleItem = ({ model }) => {
     if (!model || !model.chroniclePart) {
         return false;
     }
     return (
         <div className={item} key={model.number}>
-            <a className="hiddenAnchor" id={model.title}>{model.title}</a>
+            <a className="hiddenAnchor" id={chapterNames(model.chapter)}>{chapterNames(model.chapter)}</a>
             <h3 className={title}>{model.title} </h3>
 
            { model.chroniclePart.map((model) => (
@@ -41,7 +42,7 @@ export default class Chronicle extends React.Component {
     }
     return (
         <div>
-            <Header choosen='chronicle' links={chronicle.map((chronicle) => chronicle.title)}/>
+            <Header choosen='chronicle' links={unique(chronicle.map((chronicle) => chapterNames(chronicle.chapter)))}/>
             <div className="app">
             <div className="container">
               { chronicle.map((chronicle) => (

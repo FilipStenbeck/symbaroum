@@ -9,11 +9,8 @@ import NpcContainer from './components/npc/npcContainer';
 import chronicleContainer from './components/chronicle/chronicleContainer';
 import SplashContainer from './components/splash/splashContainer';
 
-
-
 import { reducer } from './reducers';
 import {
-	fetchPeople,
     fetchNpc,
     fetchChroncile
 } from './actions'
@@ -33,14 +30,21 @@ store.dispatch(fetchChroncile());
 //Save store on windows for easy access from the dev-tool console
 window.store = store;
 
+//Add unique function to Array
+Array.prototype.unique = function() {
+  return this.filter(function (value, index, self) {
+    return self.indexOf(value) === index;
+  });
+}
+
 render(
-	<Provider store={store}>
-		<Router history={browserHistory}>
-			<Route path="/" component={chronicleContainer}/>
-			<Route path="/chronicle" component={chronicleContainer}/>
+    <Provider store={store}>
+        <Router history={browserHistory}>
+            <Route path="/" component={chronicleContainer}/>
+            <Route path="/chronicle" component={chronicleContainer}/>
             <Route path="/npc" component={NpcContainer}/>
-			<Route path="/splash" component={SplashContainer}/>
+            <Route path="/splash" component={SplashContainer}/>
     </Router>
   </Provider>,
-	document.getElementById('app')
+    document.getElementById('app')
 );
