@@ -16,6 +16,7 @@
   "author": "Filip Stenbeck",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.2.0",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
     "babel-plugin-syntax-object-rest-spread": "6.13.0",

@@ -20,15 +20,17 @@ const ChronicleItem = ({ model }) => {
         return false;
     }
     return (
-        <div className={item} key={model.number}>
+        <div>
             <a className="hiddenAnchor" id={chapterNames(model.chapter)}>{chapterNames(model.chapter)}</a>
-            <h3 className={title}>{model.title} </h3>
+            <div data-aos="fade-up" className={item} key={model.number}>
+                <h3 className={title}>{model.title} </h3>
 
-           { model.chroniclePart.map((model) => (
-               <div className={part} key={model.sys.id}>
-                   <ChroniclePart model={model}/>
-               </div>
-           ))}
+               { model.chroniclePart.map((model) => (
+                   <div className={part} key={model.sys.id}>
+                       <ChroniclePart model={model}/>
+                   </div>
+               ))}
+            </div>
         </div>
     )
 };

@@ -13,6 +13,9 @@ node: {
        new CopyWebpackPlugin([
          { from: 'node_modules/milligram/dist/milligram.min.css', to: 'milligram.min.css' },
      ]),
+     new CopyWebpackPlugin([
+       { from: 'node_modules/aos/dist/aos.css', to: 'aos.css' },
+   ]),
      new webpack.DefinePlugin({
      'process.env': {
        'API': '"https://symbaroum.herokuapp.com/api"'

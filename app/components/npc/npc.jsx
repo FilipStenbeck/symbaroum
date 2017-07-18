@@ -1,8 +1,6 @@
 import React from 'react';
-import Logo from '../header/logo.jsx';
 
 import {
-    npcContainer,
     info,
     imgContainer,
     npcImage,
@@ -20,7 +18,7 @@ const NpcItem = ({ model }) => {
         return false;
     }
     return (
-        <div className={item} key={model.name}>
+        <div data-aos="fade-up" className={item} key={model.name}>
             <a className="hiddenAnchor" id={model.name}>{model.name}</a>
             <div className={"row"}>
              <div className={"column"}>
