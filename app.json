@@ -1,0 +1,26 @@
+{
+  "name": "symbaroum",
+  "scripts": {
+  },
+  "env": {
+    "ACCESS_TOKEN": {
+      "required": true
+    },
+    "SPACE_ID": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
