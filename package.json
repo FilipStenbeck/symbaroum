@@ -2,9 +2,7 @@
   "name": "Symbaroum",
   "version": "1.0.0",
   "description": "React webapp with contentful CMS backend",
-  "engines": {
-    "node": "7.5.0"
-  },
+
   "main": "server.js",
   "scripts": {
     "start": "webpack && node server.js",
